@@ -1,0 +1,12 @@
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1 class="jumbotron-heading">Compa Bot</h1>
+    <p class="lead text-muted">Start saving your links across your slack with this bot.</p>
+    <p>
+      <a href="#" class="btn btn-primary">Main call to action</a>
+      <a href="#" class="btn btn-secondary">Secondary action</a>
+    </p>
+  </div>
+</section>
+
+

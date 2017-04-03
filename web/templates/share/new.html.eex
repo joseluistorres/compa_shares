@@ -1,0 +1,6 @@
+<h2>New share</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: share_path(@conn, :create) %>
+
+<%= link "Back", to: share_path(@conn, :index) %>

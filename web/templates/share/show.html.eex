@@ -1,0 +1,52 @@
+<h2>Show share</h2>
+
+<div class="wall">
+  <div class="post-group">
+    <div class="group-date">
+      <h2>March 13rd</h2>
+    </div>
+    <div class="posts">
+      <div class="post-container">
+        <div class="post">
+
+          <div class="source">
+
+              <div class="avatar" style="background-image: url(&quot;https://avatars.slack-edge.com/2015-05-27/5101808521_ba68f4f76a99a7360781_original.jpg&quot;);"><div class="avatar-shade"></div></div>
+              <div class="meta"> <span class="username"><%= @share.username %></span>
+                <a class="permalink" href="https://gdljs.slack.com/archives/general/p1456328192000413"> 
+                  <span class="date">
+                    <span class="month">Feb</span>
+                    <span class="day">24</span>th at 
+                    <span class="time">9:36 AM</span>
+                  </span>
+                </a>
+              </div>
+              <div class="message">
+                <%= link @share.link, to: @share.link %>
+              </div>
+
+          </div>
+
+          <div class="content">
+            <img src="<%= @share.image_url || static_path(@conn, "/images/20160426153921.png") %>" width="280" height="168">
+            <p>
+            <%= @share.description %>
+            </p>
+          </div>
+
+          <div class="links">
+            <%= link @share.link, to: @share.link %>
+          </div>
+
+          <div class="shade"></div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<%= link "Update Description", to: share_path(@conn, :update_description, @share), class: "btn btn-warning" %>
+<%= link "Edit", to: share_path(@conn, :edit, @share), class: "btn btn-success" %>
+<%= link "Back", to: share_path(@conn, :index), class: "btn btn-danger" %>

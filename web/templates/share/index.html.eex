@@ -1,0 +1,73 @@
+<h2>Listing shares</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Link</th>
+      <th>Description</th>
+      <th>Created At</th>
+      <th>Username</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for share <- @shares do %>
+    <tr>
+      <td><%= share.link %></td>
+      <td><%= share.description %></td>
+      <td><%= share.date_shared %></td>
+      <td><%= share.username %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: share_path(@conn, :show, share), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: share_path(@conn, :edit, share), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: share_path(@conn, :delete, share), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<div class="row">
+  <div class="card">
+    <img src="https://i.ytimg.com/vi/anhRxIQutZ8/maxresdefault.jpg" alt="Card image cap" width="356" height="280">
+    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+  </div>
+  <div class="card">
+    <img src="https://i.ytimg.com/vi/anhRxIQutZ8/maxresdefault.jpg" alt="Card image cap" width="356" height="280">
+    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+  </div>
+  <div class="card">
+    <img src="https://i.ytimg.com/vi/anhRxIQutZ8/maxresdefault.jpg" alt="Card image cap" width="356" height="280">
+    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+  </div>
+
+  <div class="card">
+    <img src="https://i.ytimg.com/vi/anhRxIQutZ8/maxresdefault.jpg" alt="Card image cap" width="356" height="280">
+    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+  </div>
+  <div class="card">
+    <img src="https://i.ytimg.com/vi/anhRxIQutZ8/maxresdefault.jpg" alt="Card image cap" width="356" height="280">
+    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+  </div>
+  <div class="card">
+    <img src="https://i.ytimg.com/vi/anhRxIQutZ8/maxresdefault.jpg" alt="Card image cap" width="356" height="280">
+    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+  </div>
+
+  <div class="card">
+    <img src="https://i.ytimg.com/vi/anhRxIQutZ8/maxresdefault.jpg" alt="Card image cap" width="356" height="280">
+    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+  </div>
+  <div class="card">
+    <img src="https://i.ytimg.com/vi/anhRxIQutZ8/maxresdefault.jpg" alt="Card image cap" width="356" height="280">
+    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+  </div>
+  <div class="card">
+    <img src="https://i.ytimg.com/vi/anhRxIQutZ8/maxresdefault.jpg" alt="Card image cap" width="356" height="280">
+    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+  </div>
+</div>
+
+<%= link "New share", to: share_path(@conn, :new) %>
